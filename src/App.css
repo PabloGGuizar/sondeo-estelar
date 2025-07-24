@@ -1,0 +1,150 @@
+/* src/App.css */
+:root {
+  font-family: 'Segoe UI', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color-scheme: dark;
+  color: #e0e0e0;
+  background-color: #0c0a1a;
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Estilos para la pantalla de conexión */
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: rgba(20, 10, 40, 0.8);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid #4a4a8a;
+}
+input {
+    padding: 0.5em;
+    margin-right: 0.5em;
+    border-radius: 5px;
+    border: 1px solid #4a4a8a;
+}
+button {
+  background-color: #ffcc00;
+  color: #0c0a1a;
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+button:hover {
+  background-color: #ffd633;
+}
+
+/* Estilos del juego */
+.game-container {
+  max-width: 900px;
+  margin: auto;
+}
+.game-area {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.grid-container {
+  text-align: center;
+  margin: 10px;
+}
+#status-message {
+    margin: 20px 0;
+    font-size: 1.2em;
+    color: #ffcc00;
+    min-height: 25px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(10, 35px);
+  grid-template-rows: repeat(10, 35px);
+  border: 2px solid #4a4a8a;
+  background-color: rgba(10, 10, 30, 0.5);
+  box-shadow: 0 0 15px rgba(74, 74, 138, 0.7);
+}
+
+.cell {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #2a2a5a;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.cell:hover {
+  background-color: rgba(173, 216, 230, 0.3);
+}
+
+/* Clases de estado de las celdas */
+.celestial-body { background-color: #4a90e2; } /* Parte de un cuerpo celeste en tu tablero */
+.hit { background-color: #ff4136; } /* Contacto Estelar */
+.miss { background-color: #001f3f; } /* Vacío Cósmico */
+.discovered { background-color: #2ecc40; } /* Descubrimiento Completo */
+
+/* Estilo para la previsualización de colocación */
+.cell.preview {
+  background-color: rgba(144, 238, 144, 0.4); /* Verde claro semitransparente */
+  cursor: pointer;
+}
+
+/* Estilos para los cuerpos celestes ya colocados */
+.cell.body {
+  background-color: rgba(74, 144, 226, 0.3); /* Azul claro semitransparente */
+  cursor: not-allowed;
+}
+
+/* Centrar el contenido (el icono SVG) dentro de la celda */
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Añade esto a tu archivo src/App.css */
+
+.narrative-box {
+  border: 1px solid #4a4a8a;
+  background-color: rgba(20, 10, 40, 0.8);
+  padding: 2rem;
+  border-radius: 15px;
+  margin: 20px auto;
+}
+
+.subtitle {
+  color: #a9d4fd;
+  font-style: italic;
+}
+
+.narrative-text {
+  color: #c0c0c0;
+  max-width: 600px;
+  margin: 1em auto;
+  line-height: 1.6;
+}
+
+.narrative-text-success {
+  color: #98fb98; /* Verde pálido */
+  font-weight: bold;
+}
+
+.turn-indicator {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.status-message {
+  min-height: 40px;
+  color: #e0e0e0;
+  font-style: italic;
+}
